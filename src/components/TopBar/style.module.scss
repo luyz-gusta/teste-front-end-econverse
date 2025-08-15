@@ -1,0 +1,28 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.topBar {
+    @include flexbox($align: center, $justify: center, $gap: 119px);
+    width: 100%;
+    padding: 6px;
+    border-bottom: 1px solid #F0F0F0;
+
+    p {
+        @include flexbox($align: center, $justify: center, $gap: 9px);
+        color: $text-gray;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    span{
+        color: $blue-hover;
+        font-weight: 600;
+    }
+}
+
+@include responsive($breakpoint: small){
+    .topBar{
+        @include flexbox($align: center, $justify: center, $gap: 30px);
+        flex-wrap: wrap;
+    }
+}

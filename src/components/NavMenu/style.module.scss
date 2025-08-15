@@ -1,0 +1,26 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.navMenu {
+    @include flexbox($align: center, $justify: space-between);
+    box-shadow: 0 8px 16px 0 rgba(57, 48, 19, 0.12);
+
+    padding: 11px 70px;
+    width: 100%;
+
+    a {
+        color: $text-gray;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: all 0.5s;
+
+        &:hover{
+            color: $blue-hover;
+        }
+    }
+}
+
+.subscription {
+    @include flexbox($align: center, $justify: center, $gap: 12px);
+}

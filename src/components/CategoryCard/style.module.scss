@@ -1,0 +1,63 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.categoryCard {
+    @include flexbox($direction: column, $align: center, $justify: center, $gap: 22px);
+    cursor: pointer;
+}
+
+.imageContainer {
+    padding: 34px;
+    border-radius: 10px;
+
+    img {
+        width: 61px;
+        height: 61px;
+    }
+}
+
+.selected {
+    .imageContainer {
+        background: $white;
+        box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.22);
+    }
+
+    h3 {
+        color: $blue-hover;
+        font-size: 14px;
+        font-weight: 600;
+    }
+}
+
+.default {
+    .imageContainer {
+        background: $bg-gray;
+        box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.13);
+        transition: all 0.5s ease-in-out;
+    }
+
+    h3 {
+        color: #4e4e4e;
+        font-size: 14px;
+        font-weight: 500;
+                transition: all 0.5s ease-in-out;
+
+    }
+
+    &:hover {
+        .imageContainer {
+            background: $white;
+            box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.22);
+
+            img {
+                filter: invert(13%) sepia(68%) saturate(7476%) hue-rotate(251deg) brightness(55%) contrast(150%);
+            }
+        }
+
+        h3 {
+            color: $blue-hover;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
+}

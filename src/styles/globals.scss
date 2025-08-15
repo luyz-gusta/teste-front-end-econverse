@@ -1,0 +1,62 @@
+@use "mixins" as *;
+@use "variables" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif !important;
+  background-color: $white;
+}
+
+#root,
+body,
+html {
+  height: 100%;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul,
+ol,
+li {
+  list-style: none !important;
+}
+
+.card-item {
+  width: max-content;
+    border: 2px solid $violet;
+}
+
+.card-list .card-item .card-link {
+  width: 400px;
+  display: block;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+
+}
+
+.card-list .card-link .card-image{
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-list .card-link .badge{
+  color: #5372F0;
+  background: #DDE4FF;
+  margin: 16px 0 18px;
+
+}
