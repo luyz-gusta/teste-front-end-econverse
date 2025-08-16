@@ -1,7 +1,16 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
 
-.categories{
+.categories {
     @include flexbox($align: center, $justify: center, $gap: 42px);
     margin-top: 40px;
+}
+
+@include responsive($breakpoint: large) {
+    .categories {
+        @include flexbox($align: center, $gap: 42px);
+        width: 100%;
+        overflow-x: scroll;
+        scrollbar-width: none;
+    }
 }

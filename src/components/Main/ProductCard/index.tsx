@@ -8,7 +8,7 @@ export default function ProductCard({ product }: { product: Product }) {
 
     return (
         <div className={styles.productCard} onClick={() => setModalOpen(true)}>
-            <img src={product.photo} alt={product.productName} />
+            <img loading="lazy" src={product.photo} alt={product.productName} />
             <h2 className={styles.productName}>{product.productName}</h2>
             <section aria-label="Preço">
                 <p className={styles.prices}>

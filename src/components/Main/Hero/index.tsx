@@ -5,7 +5,7 @@ import Container from '../../Container';
 export default function Hero() {
     return (
         <section className={styles.hero}>
-            <img src={banner} alt="Promoções" />
+            <img loading="lazy" src={banner} alt="Promoções" />
             <div className={styles.content}>
                 <Container className={styles.container} direction='column'>
                     <h2>Venha conhecer nossas promoções</h2>

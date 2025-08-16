@@ -6,3 +6,10 @@
     width: 100%;
     padding: 0px 40px;
 }
+
+@include responsive($breakpoint: large) {
+    .header {
+        padding: 0px;
+    }
+}
+

@@ -12,17 +12,17 @@ export default function MainFooter() {
         <footer className={styles.footer}>
             <Container className={styles.container}>
                 <section className={styles.section}>
-                    <img src={logo} alt="Logo" />
+                    <img loading="lazy" src={logo} alt="Logo" />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <ul className={styles.socialMedia}>
                         <li>
-                            <img src={instagram} alt="Instagram" />
+                            <img loading="lazy" src={instagram} alt="Instagram" />
                         </li>
                         <li>
-                            <img src={facebook} alt="Facebook" />
+                            <img loading="lazy" src={facebook} alt="Facebook" />
                         </li>
                         <li>
-                            <img src={linkedin} alt="LinkedIn" />
+                            <img loading="lazy" src={linkedin} alt="LinkedIn" />
                         </li>
                     </ul>
                 </section>

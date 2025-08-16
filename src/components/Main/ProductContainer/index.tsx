@@ -1,8 +1,20 @@
+import { useEffect, useState } from 'react';
 import { SUBCATEGORIES } from '../../../utils/constants';
 import Carousel from '../Carousel';
 import styles from './style.module.scss';
+import type { Product } from '../../../@types/types';
+import ProductCard from '../ProductCard';
 
 export default function ProductContainer({ withFilter }: { withFilter: boolean }) {
+    const [products, setProducts] = useState<Product[]>([])
+
+
+    useEffect(() => {
+        fetch("/products.json")
+            .then((res) => res.json())
+            .then((data) => setProducts(data.products));
+    }, [])
+
     return (
         <section className={styles.productContainer}>
             <div className={styles.title}>
@@ -18,7 +30,13 @@ export default function ProductContainer({ withFilter }: { withFilter: boolean }
                     <li className={styles.default}>Ver todos</li>
                 </ul>
             ) : <a href="#" className={styles.viewAll}>Ver todos</a>}
-            <Carousel />
+            <Carousel products={products} />
+
+            <div className={styles.products}>
+                {products.map((product, index) => ( 
+                    <ProductCard key={index} product={product} />
+                ))}
+            </div>
         </section>
     )
 }

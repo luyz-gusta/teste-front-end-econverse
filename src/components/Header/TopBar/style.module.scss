@@ -20,9 +20,8 @@
     }
 }
 
-@include responsive($breakpoint: small){
+@include responsive($breakpoint: large){
     .topBar{
-        @include flexbox($align: center, $justify: center, $gap: 30px);
-        flex-wrap: wrap;
+        display: none;
     }
 }

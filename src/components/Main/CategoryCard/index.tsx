@@ -6,7 +6,7 @@ export default function CategoryCard({ category }: { category: Category }) {
     return (
         <div className={`${styles.categoryCard} ${category.name.toLowerCase() == 'tecnologia' ? styles.selected : styles.default}`}>
             <div className={styles.imageContainer}>
-                <img src={Icons[category.icon]} alt={category.name} />
+                <img loading="lazy" src={Icons[category.icon]} alt={category.name} />
             </div>
             <h3>{category.name}</h3>
         </div>

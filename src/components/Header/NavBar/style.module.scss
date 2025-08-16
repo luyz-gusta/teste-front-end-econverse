@@ -64,3 +64,27 @@
         cursor: pointer;
     }
 }
+
+.iconListMobile{
+    display: none;
+}
+
+@include responsive($breakpoint: large) {
+    .iconList, .searchContainer {
+        display: none;
+    }
+
+    .iconListMobile {
+        @include flexbox($align: center, $gap: 20px);
+
+        li img {
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+        }
+
+        li svg{
+            color: $text-gray;
+        }
+    }
+}

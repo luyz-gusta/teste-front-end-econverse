@@ -1,29 +1,30 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
+@use "sass:color";
 
 .hero {
     @include flexbox();
     width: 100%;
-    height: auto;
+    height: 500px;
     position: relative;
-    background-color: $yellow;
 
     img {
         width: 100%;
         height: 100%;
+        display: block;
+        object-fit: cover;
     }
 }
 
-.container{
+.container {
     justify-content: center;
     align-items: start !important;
-
 }
 
 .content {
     background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 85.04%);
     position: absolute;
-    
+
     width: 100%;
     padding: 80px 40px;
 
@@ -70,4 +71,28 @@
     color: $violet;
     font-size: 16px;
     font-weight: 600;
+
+    transition: all 0.4s;
+
+    &:hover {
+        background: color.adjust($color: $yellow, $lightness: -10%);
+        color: color.adjust($color: $blue, $lightness: -5%);
+    }
+}
+
+@include responsive($breakpoint: medium) {
+    .container {
+        justify-content: center;
+        align-items: center !important;
+        text-align: center;
+    }
+
+    .content {
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+    }
 }

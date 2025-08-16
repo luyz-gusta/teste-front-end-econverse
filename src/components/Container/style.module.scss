@@ -14,3 +14,10 @@
 .column {
   @include flexbox($direction: column, $align: center);
 }
+
+
+@include responsive($breakpoint: large) {
+    .container {
+        padding: 0px 20px;
+    }
+}

@@ -8,27 +8,27 @@ export default function Brands() {
             <ul className={styles.brandList}>
                 <li className={styles.brandItem}>
                     <div>
-                        <img src={logo} alt="Imagem meramente ilustrativa de uma marca" />
+                        <img loading="lazy" src={logo} alt="Imagem meramente ilustrativa de uma marca" />
                     </div>
                 </li>
                 <li className={styles.brandItem}>
                     <div>
-                        <img src={logo} alt="Imagem meramente ilustrativa de uma marca" />
+                        <img loading="lazy" src={logo} alt="Imagem meramente ilustrativa de uma marca" />
                     </div>
                 </li>
                 <li className={styles.brandItem}>
                     <div>
-                        <img src={logo} alt="Imagem meramente ilustrativa de uma marca" />
+                        <img loading="lazy" src={logo} alt="Imagem meramente ilustrativa de uma marca" />
                     </div>
                 </li>
                 <li className={styles.brandItem}>
                     <div>
-                        <img src={logo} alt="Imagem meramente ilustrativa de uma marca" />
+                        <img loading="lazy" src={logo} alt="Imagem meramente ilustrativa de uma marca" />
                     </div>
                 </li>
                 <li className={styles.brandItem}>
                     <div>
-                        <img src={logo} alt="Imagem meramente ilustrativa de uma marca" />
+                        <img loading="lazy" src={logo} alt="Imagem meramente ilustrativa de uma marca" />
                     </div>
                 </li>
                 

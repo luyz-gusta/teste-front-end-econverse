@@ -11,7 +11,7 @@ export default function NavMenu() {
             <a href="#">Lançamentos</a>
             <a href="#" className={styles.selected}>Ofertas do dia</a>
             <a href="#" className={styles.subscription}>
-                <img src={Icons.CrownSimple} alt="Icone de coroa" />
+                <img loading="lazy" src={Icons.CrownSimple} alt="Icone de coroa" />
                 Assinatura
             </a>
         </nav>

@@ -31,3 +31,16 @@
 .subscription {
     @include flexbox($align: center, $justify: center, $gap: 12px);
 }
+
+@include responsive($breakpoint: large) {
+    .navMenu{
+        overflow-x: scroll;
+        scrollbar-width: none;
+        gap: 12px;
+        padding: 11px 10px;
+
+        a{
+            white-space: nowrap;
+        }
+    }
+}

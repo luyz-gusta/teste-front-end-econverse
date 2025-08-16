@@ -56,3 +56,9 @@
         cursor: not-allowed;
     }
 }
+
+@include responsive($breakpoint: small) {
+    .carousel{
+        display: none;
+    }
+}

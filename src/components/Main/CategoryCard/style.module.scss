@@ -4,6 +4,7 @@
 .categoryCard {
     @include flexbox($direction: column, $align: center, $justify: center, $gap: 22px);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .imageContainer {

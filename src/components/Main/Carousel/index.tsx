@@ -5,9 +5,8 @@ import ProductCard from "../ProductCard";
 import arrowLeft from '../../../assets/icons/ArrowLeft.svg';
 import arrowRight from '../../../assets/icons/ArrowRight.svg';
 
-export default function Carousel() {
+export default function Carousel({products}: {products: Product[]}) {
     const [index, setIndex] = useState(0);
-    const [products, setProducts] = useState<Product[]>([])
     const [visibleCards, setVisibleCards] = useState(4);
 
     useEffect(() => {
@@ -28,16 +27,10 @@ export default function Carousel() {
         setIndex((prev) => Math.max(prev - visibleCards, 0));
     };
 
-    useEffect(() => {
-        fetch("/products.json")
-            .then((res) => res.json())
-            .then((data) => setProducts(data.products));
-    }, [])
-
     return (
         <section className={styles.carousel}>
             <button className={styles.btn} onClick={prev} disabled={index === 0}>
-                <img src={arrowLeft} alt="Previous" />
+                <img loading="lazy" src={arrowLeft} alt="Previous" />
             </button>
 
             <div className={styles.trackContainer}>
@@ -58,7 +51,7 @@ export default function Carousel() {
                 onClick={next}
                 disabled={index + visibleCards >= products.length}
             >
-                <img src={arrowRight} alt="Next" />
+                <img loading="lazy" src={arrowRight} alt="Next" />
             </button>
         </section>
     );

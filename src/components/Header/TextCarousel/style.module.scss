@@ -1,0 +1,49 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+
+.carousel {
+    display: none;
+}
+
+@include responsive($breakpoint: large) {
+    .carousel {
+        display: flex;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        border-bottom: 1px solid #F0F0F0;
+        padding: 6px;
+    }
+
+    p {
+        @include flexbox($align: center, $justify: center, $gap: 10px);
+        color: $text-gray;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    span{
+        color: $blue-hover;
+        font-weight: 600;
+    }
+
+    .topBar {
+        display: inline-flex;
+        gap: 30vw;
+        animation: scroll 12s linear infinite;
+    }
+
+    .topBar span {
+        flex: none;
+    }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

@@ -1,5 +1,6 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
+@use "sass:color";
 
 .advertisementCard {
     @include flexbox();
@@ -39,8 +40,7 @@
         font-weight: 400;
         line-height: normal;
         max-width: 200px;
-                font-family: "Poppins", sans-serif !important;
-
+        font-family: "Poppins", sans-serif !important;
     }
 
     button {
@@ -60,5 +60,54 @@
         text-transform: uppercase;
         font-family: "Poppins", sans-serif !important;
         text-align: center;
+        transition: all 0.5s;
+
+        &:hover {
+            background: color.adjust($color: $yellow, $lightness: -10%);
+            color: color.adjust($color: $blue, $lightness: -5%);
+        }
+    }
+}
+
+@include responsive($breakpoint: small) {
+    .advertisementCard {
+        min-height: 290px;
+        border-radius: 20px;
+
+        img {
+            display: block;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .content {
+        height: 100%;
+    }
+}
+
+@include responsive($breakpoint: small) {
+    .advertisementCard {
+        min-height: 240px;
+        border-radius: 20px;
+
+        img {
+            display: block;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    .content {
+        padding: 20px 20px;
+        height: 100%;
+
+        h3 {
+            font-size: 28px;
+        }
+
+        button {
+            padding: 10px 42px;
+        }
     }
 }
