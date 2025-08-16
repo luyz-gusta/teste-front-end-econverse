@@ -11,9 +11,11 @@
 }
 
 body {
+  // @include flexbox($direction: column);
   width: 100%;
   font-family: "Poppins", sans-serif !important;
   background-color: $white;
+  height: 100%;
 }
 
 #root,
@@ -32,31 +34,8 @@ li {
   list-style: none !important;
 }
 
-.card-item {
-  width: max-content;
-    border: 2px solid $violet;
-}
-
-.card-list .card-item .card-link {
-  width: 400px;
-  display: block;
-  background: #fff;
-  padding: 18px;
-  border-radius: 12px;
-  text-decoration: none;
-
-}
-
-.card-list .card-link .card-image{
-  width: 100%;
-  aspect-ratio: 16/9;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.card-list .card-link .badge{
-  color: #5372F0;
-  background: #DDE4FF;
-  margin: 16px 0 18px;
-
+main{
+  @include flexbox($direction: column, $gap: 90px);
+  padding: 0px 37px;
+  margin: 90px 0px;
 }

@@ -1,0 +1,43 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.footer {
+    @include flexbox($justify: space-between, $align: stretch ,$gap: 90px);
+    padding: 42px 80px;
+    background: #f4f4f4;
+}
+
+
+.container{
+    @include flexbox($direction: column, $gap: 18px, $justify: center);
+    width: auto;
+    max-width: 354px;
+    padding: 21px 0px;
+}
+
+.navLinks{
+    @include gridcolumns( $minwidth: 120px, $maxwidth: 1fr, $gap: 40px);
+    align-items: center;
+}
+
+
+.separator{
+    width: 1px;
+    border-color: rgba(40, 40, 40, 0.18);
+}
+
+.socialMedia{
+    @include flexbox($direction: row, $gap: 26px);
+    margin-top: 12px;
+
+    li{
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

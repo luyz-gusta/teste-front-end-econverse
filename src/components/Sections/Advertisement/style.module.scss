@@ -1,0 +1,8 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.advertisement{
+    @include gridcolumns($minwidth: 300px, $gap: 13px); 
+    width: 100%;
+    padding: 0px 40px;
+}

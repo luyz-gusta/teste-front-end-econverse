@@ -1,4 +1,3 @@
-
 import { Icons } from './../utils/icons';
 
 export interface Category {
@@ -12,6 +11,16 @@ export interface Product {
     descriptionShort: string;
     photo: string;
     price: number;
+}
+
+export interface Link { 
+    title: string;
+    options: string[];
+}
+
+export interface Response {
+    success: boolean;
+    products: Product[];
 }
 
 

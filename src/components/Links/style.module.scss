@@ -1,0 +1,27 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.linksContainer {
+    @include flexbox($direction: column, $gap: 20px);
+
+    h4 {
+        color: rgba(34, 34, 34, 0.71);
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+    }
+}
+
+.linksList {
+    @include flexbox($direction: column, $gap: 16px);
+
+    li {
+        color: rgba(34, 34, 34, 0.71);
+        font-family: "Work Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        cursor: pointer;
+    }
+}

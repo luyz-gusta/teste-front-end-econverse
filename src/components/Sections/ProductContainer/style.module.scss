@@ -2,10 +2,8 @@
 @use "/src/styles/mixins" as *;
 
 .productContainer {
-    @include flexbox($direction: column, $gap: 22px);
-
+    @include flexbox($direction: column, $gap: 4px);
     width: 100%;
-    padding: 0px 38px;
 }
 
 .title {
@@ -17,17 +15,61 @@
         color: $blue;
         font-size: 30px;
         font-weight: 700;
-        white-space: nowrap; 
+        white-space: nowrap;
     }
 
-    span {
+    hr {
         width: 100%;
         border: 1px solid #dedede;
     }
 }
 
-.productSlide{
+.viewAll {
+    width: 100%;
+    color: $black;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.productSlide {
     background-color: green;
     width: 100%;
     height: 100%;
+    margin-top: 20px;
+}
+
+.subCategoryNav {
+    @include gridcolumns($minwidth: 214px, $maxwidth: 1fr);
+    width: 100%;
+    padding: 0px 40px;
+
+    li {
+        @include flexbox($align: center, $justify: center);
+        font-family: Poppins;
+        text-transform: uppercase;
+        padding: 12px 0px;
+        border: 1px solid #bdbdbd;
+        background: $white;
+        line-height: 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+.selected {
+    color: $blue;
+    font-weight: 700;
+}
+
+.default {
+    color: $text-black;
+    font-weight: 400;
+    transition: all .2s;
+
+    &:hover {
+        color: $blue;
+        font-weight: 700;
+    }
 }

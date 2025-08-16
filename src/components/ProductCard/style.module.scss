@@ -1,0 +1,76 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.productCard {
+    @include flexbox($direction: column, $justify: space-between);
+    width: 304px;
+    height: 500px;
+    min-width: 304px;
+    flex: 0 0 calc(25% - 10px);
+    border-radius: 10px;
+    background: $white;
+    box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.22);
+    padding: 20px 14px 16px 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.7);
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.productName {
+    color: $black;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.prices {
+    @include flexbox($direction: column, $gap: 2px);
+
+    span {
+        color: #808080;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration-line: line-through;
+    }
+
+    strong {
+        color: $black;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.installments {
+    color: $black;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.freeShipping {
+    color: $blue;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.buyButton {
+    cursor: pointer;
+    width: 100%;
+    padding: 13px 0px;
+    border: none;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 4px;
+    color: $white;
+    background: $blue;
+}

@@ -1,0 +1,12 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.bottomBar {
+    @include flexbox($align: center, $justify: center);
+    padding: 13px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 300;
+    color: $black;
+    background-color: $white;
+}

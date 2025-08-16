@@ -1,4 +1,12 @@
-import type { Category } from "../@types/types";
+import type { Category, Link } from "../@types/types";
+
+export const SUBCATEGORIES: string[] = [
+    "Celular",
+    "Acessórios",
+    "Tablets",
+    "Notebooks",
+    "Tvs"
+];
 
 export const CATEGORIES: Category[] = [
     {
@@ -30,5 +38,20 @@ export const CATEGORIES: Category[] = [
     {
         name: "Moda",
         icon: "Fashion",
+    }
+]
+
+export const LINKS: Link[] = [
+    {
+        title: 'Institucional',
+        options: ['Sobre nós', 'Movimento', 'Trabalhe conosco']
+    },
+    {
+        title: 'Ajuda',
+        options: ['Suporte', 'Fale Conosco', 'Perguntas Frequentes']
+    },
+    {
+        title: 'Termos',
+        options: ['Termos e Condições', 'Política de Privacidade', 'Troca e Devolução']
     }
 ]

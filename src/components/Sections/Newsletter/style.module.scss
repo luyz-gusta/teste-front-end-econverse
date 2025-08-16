@@ -1,0 +1,89 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    width: 100%;
+    background-color: $violet;
+    padding: 20px 80px;
+
+    .content, .form{
+        margin: 20px 0px;
+    }
+}
+
+.content {
+    @include flexbox($direction: column, $align: start, $gap: 8px);
+
+    h3 {
+        color: $white;
+        font-family: Outfit;
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    p {
+        max-width: 520px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+    }
+}
+
+.form {
+    @include flexbox($direction: column, $align: start, $gap: 8px, $justify: start);
+}
+
+.inputs {
+    @include flexbox($align: start, $gap: 8px);
+    input {
+        color: #676767;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        width: 232px;
+        padding: 12px 24px;
+        border-radius: 8px;
+        border: 1px solid #e7e7e7;
+        background-color: $white;
+    }
+
+    button {
+        @include flexbox($align: center, $justify: center, $gap: 10px);
+        padding: 15px 40px;
+        border: none;
+        border-radius: 8px;
+        background: #f7ca11;
+        cursor: pointer;
+        color: #161615;
+        font-family: Poppins;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 12px;
+        text-transform: uppercase;
+    }
+}
+
+.checkbox {
+    @include flexbox($align: center, $gap: 4px);
+
+    input {
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+    }
+
+    label {
+        color: $white;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
