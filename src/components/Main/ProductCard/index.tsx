@@ -1,8 +1,6 @@
-import { useState } from "react";
 import type { Product } from "../../../@types/types";
-import styles from './style.module.scss';
-import Modal from "../../Modal";
 import { useContexts } from "../../../hooks/useContexts";
+import styles from './style.module.scss';
 
 export default function ProductCard({ product }: { product: Product }) {
     const { setModalOpen } = useContexts()
@@ -15,9 +13,9 @@ export default function ProductCard({ product }: { product: Product }) {
             <section aria-label="Preço">
                 <p className={styles.prices}>
                     <span>
-                        R$ {Number(product.price).toFixed(2)}
+                        R$ {Number(product.price * 1.20)},00
                     </span>
-                    <strong>R$ {(product.price * 1.20).toFixed(2)}</strong>
+                    <strong>R$ {(product.price)},00</strong>
                 </p>
                 <p className={styles.installments}>ou 2x de R$ 49,95 sem juros</p>
                 <span className={styles.freeShipping}>Frete grátis</span>

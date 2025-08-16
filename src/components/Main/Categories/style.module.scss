@@ -4,5 +4,4 @@
 .categories{
     @include flexbox($align: center, $justify: center, $gap: 42px);
     margin-top: 40px;
-    margin-bottom: 90px;
 }

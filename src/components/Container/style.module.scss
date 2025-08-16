@@ -1,0 +1,16 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    padding: 0px 40px;
+}
+
+.row {
+  @include flexbox($direction: row);
+}
+
+.column {
+  @include flexbox($direction: column, $align: center);
+}

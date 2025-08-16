@@ -41,7 +41,7 @@
 }
 
 .subCategoryNav {
-    @include gridcolumns($minwidth: 214px, $maxwidth: 1fr);
+    @include gridcolumns($minwidth: 190px, $maxwidth: 1fr);
     width: 100%;
     padding: 0px 40px;
 

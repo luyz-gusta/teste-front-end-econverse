@@ -1,11 +1,17 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
 
+.section{
+    @include flexbox( $align: center, $justify: center);
+    width: 100%;
+    background-color: $violet;
+    padding: 20px 0px;
+    margin-top: 90px;
+}
+
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-    width: 100%;
-    background-color: $violet;
     padding: 20px 80px;
 
     .content, .form{

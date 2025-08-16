@@ -2,7 +2,7 @@
 @use "/src/styles/mixins" as *;
 
 .header{
-    @include flexbox($direction: column);
+    @include flexbox($align: center, $justify: center);
     width: 100%;
-    padding: 0px 80px;
+    padding: 0px 40px;
 }

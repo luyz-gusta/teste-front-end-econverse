@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+#root{
+  min-height: 100%;
+  height: auto;
+}
+
 body {
   width: 100%;
   font-family: "Poppins", sans-serif !important;
@@ -34,7 +39,5 @@ li {
 }
 
 main{
-  @include flexbox($direction: column, $gap: 90px);
-  padding: 0px 37px;
-  margin: 90px 0px;
+  @include flexbox($align: center, $justify: center);
 }
