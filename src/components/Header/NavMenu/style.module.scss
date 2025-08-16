@@ -21,6 +21,13 @@
     }
 }
 
+.selected {
+    color: $blue-hover !important;
+    font-family: Poppins, sans-serif;
+}
+
+
+
 .subscription {
     @include flexbox($align: center, $justify: center, $gap: 12px);
 }

@@ -1,12 +1,12 @@
-import { LINKS } from '../../../utils/constants';
-import Links from '../../Links';
 import styles from './style.module.scss';
 import logo from '/logo.svg';
 import instagram from '../../../assets/icons/instagram.svg';
 import facebook from '../../../assets/icons/facebook.svg';
 import linkedin from '../../../assets/icons/linkedin.svg';
+import { LINKS } from '../../../utils/constants';
+import Links from '../Links';
 
-export default function Footer() {
+export default function MainFooter() {
     return (
         <footer className={styles.footer}>
             <section className={styles.container}>

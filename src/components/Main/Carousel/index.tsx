@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import styles from './style.module.scss';
-import type { Product } from "../../@types/types";
+import type { Product } from "../../../@types/types";
 import ProductCard from "../ProductCard";
-import arrowLeft from '../../assets/icons/ArrowLeft.svg';
-import arrowRight from '../../assets/icons/ArrowRight.svg';
+import arrowLeft from '../../../assets/icons/ArrowLeft.svg';
+import arrowRight from '../../../assets/icons/ArrowRight.svg';
 
 export default function Carousel() {
     const [index, setIndex] = useState(0);

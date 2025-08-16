@@ -1,5 +1,5 @@
 import { SUBCATEGORIES } from '../../../utils/constants';
-import Carousel from '../../Carousel';
+import Carousel from '../Carousel';
 import styles from './style.module.scss';
 
 export default function ProductContainer({ withFilter }: { withFilter: boolean }) {

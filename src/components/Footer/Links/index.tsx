@@ -1,4 +1,4 @@
-import type { Link } from '../../@types/types';
+import type { Link } from '../../../@types/types';
 import styles from './style.module.scss';
 
 export default function Links({ links }: { links: Link }) {

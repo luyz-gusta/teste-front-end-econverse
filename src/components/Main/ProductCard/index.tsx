@@ -1,9 +1,15 @@
-import type { Product } from "../../@types/types";
+import { useState } from "react";
+import type { Product } from "../../../@types/types";
 import styles from './style.module.scss';
+import Modal from "../../Modal";
+import { useContexts } from "../../../hooks/useContexts";
 
 export default function ProductCard({ product }: { product: Product }) {
+    const { setModalOpen } = useContexts()
+
+
     return (
-        <div className={styles.productCard}>
+        <div className={styles.productCard} onClick={() => setModalOpen(true)}>
             <img src={product.photo} alt={product.productName} />
             <h2 className={styles.productName}>{product.productName}</h2>
             <section aria-label="Preço">

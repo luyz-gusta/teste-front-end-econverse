@@ -1,5 +1,5 @@
 import { CATEGORIES } from '../../../utils/constants';
-import CategoryCard from '../../CategoryCard';
+import CategoryCard from '../CategoryCard';
 import styles from './style.module.scss';
 
 export default function Categories(){

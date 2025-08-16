@@ -1,6 +1,6 @@
-import type { Category } from "../../@types/types";
+import type { Category } from "../../../@types/types";
 import styles from './style.module.scss';
-import { Icons } from './../../utils/icons';
+import { Icons } from '../../../utils/icons';
 
 export default function CategoryCard({ category }: { category: Category }) {
     return (

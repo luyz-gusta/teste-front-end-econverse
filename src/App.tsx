@@ -1,32 +1,18 @@
-import BottomBar from './components/BottomBar'
-import Footer from './components/Sections/Footer'
-import Advertisement from './components/Sections/Advertisement'
-import Brands from './components/Sections/Brands'
-import Categories from './components/Sections/Categories'
-import Header from './components/Sections/Header'
-import Hero from './components/Sections/Hero'
-import Newsletter from './components/Sections/Newsletter'
-import ProductContainer from './components/Sections/ProductContainer'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import Main from './components/Main'
+import Modal from './components/Modal'
+import GlobalProvider from './contexts/GlobalContext'
 
 function App() {
 
   return (
-    <>
+    <GlobalProvider>
       <Header />
-      <Hero />
-      <Categories />
-      <main>
-        <ProductContainer withFilter={true} />
-        <Advertisement />
-        <ProductContainer withFilter={false} />
-        <Advertisement />
-        <Brands />
-        <ProductContainer withFilter={false} />
-      </main>
-      <Newsletter />
+      <Main />
       <Footer />
-      <BottomBar />
-    </>
+      <Modal />
+    </GlobalProvider>
   )
 }
 

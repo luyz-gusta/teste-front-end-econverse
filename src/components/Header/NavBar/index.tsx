@@ -1,6 +1,6 @@
 import logo from '/logo.svg';
 import styles from './style.module.scss';
-import { Icons } from '../../utils/icons';
+import { Icons } from '../../../utils/icons';
 
 export default function NavBar() {
     return (

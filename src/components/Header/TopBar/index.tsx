@@ -1,4 +1,4 @@
-import { Icons } from '../../utils/icons';
+import { Icons } from '../../../utils/icons';
 import styles from './style.module.scss';
 
 export default function TopBar() {

@@ -1,4 +1,4 @@
-import AdvertisementCard from '../../AdvertisementCard';
+import AdvertisementCard from '../AdvertisementCard';
 import styles from './style.module.scss';
 
 export default function Advertisement(){

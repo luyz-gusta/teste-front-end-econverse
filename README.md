@@ -1,31 +1,98 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# Teste Front-End Jr — Econverse
 
-### Vem ser #Econverse!
+Este projeto é uma solução para o desafio técnico da vaga de Desenvolvedor Front-End na Econverse.  
+O objetivo é criar uma landing page responsiva e pixel-perfect, consumindo dados de produtos via JSON, utilizando React, TypeScript e Sass, seguindo as melhores práticas de código, acessibilidade e SEO.
 
-Segue abaixo as instruções para a execução do teste.
+---
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail ana.nascimento@econverse.com.br, joao.victor@econverse.com.br e eduardo.rodrigues@econverse.com.br com o título **Teste Vaga FrontEnd Jr**
+## 📋 Desafio
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+Desenvolver uma página conforme o layout, com as seguintes especificações:
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+- **Vitrine de produtos** consumindo dados de um arquivo JSON externo.
+- **Interação de produto:** ao clicar em um produto, abrir um modal com as principais informações do item.
+- **Estilização:** Utilizar pré-processador Sass.
+- **Layout:** Seguir o layout pixel a pixel, respeitando tamanhos, cores e espaçamentos.
+- **Sem UI Libraries:** Não utilizar bibliotecas como Bootstrap, Foundation, etc.
+- **Extras:** Boas práticas de SEO e HTML semântico.
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+---
 
-**Boa sorte! ;)**
+## 🚀 Tecnologias Utilizadas
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Sass (SCSS)](https://sass-lang.com/)
+- [Vite](https://vitejs.dev/) (build tool)
+- ESLint (padronização de código)
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+  components/         # Componentes reutilizáveis e seções da página
+  styles/             # Variáveis, mixins e estilos globais (Sass)
+  assets/             # Imagens e ícones SVG
+  utils/              # Utilitários e constantes
+  @types/             # Tipagens TypeScript
+  App.tsx             # Componente principal
+  main.tsx            # Ponto de entrada
+```
+
+---
+
+## 🛠️ Como rodar o projeto
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/luyz-gusta/teste-front-end-econverse
+cd teste-front-end-econverse
+```
+
+### 2. Instale as dependências
+
+```bash
+npm install
+# ou
+yarn
+```
+
+### 3. Rode o projeto em modo desenvolvimento
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+Acesse [http://localhost:5173](http://localhost:5173) no navegador.
+
+---
+
+## 📝 Observações
+
+- O layout foi seguido fielmente conforme o Figma.
+- O consumo dos produtos é feito via fetch do JSON fornecido.
+- O modal de detalhes do produto é acessível via teclado e fecha ao clicar fora ou pressionar ESC.
+- O projeto utiliza HTML semântico e boas práticas de SEO (tags, headings, meta tags, etc).
+- Responsividade garantida via CSS Grid/Flexbox e media queries.
+
+---
+
+## 📦 Scripts disponíveis
+
+- `dev` — Inicia o servidor de desenvolvimento.
+- `build` — Gera a versão de produção.
+- `preview` — Visualiza a build de produção localmente.
+- `lint` — Roda o ESLint para padronização do código.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por [Luiz Gustavo](https://github.com/luyz-gusta) para o processo seletivo da Econverse.
+
+---
