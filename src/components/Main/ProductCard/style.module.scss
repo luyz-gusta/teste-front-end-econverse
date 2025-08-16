@@ -1,5 +1,6 @@
 @use "/src/styles/variables" as *;
 @use "/src/styles/mixins" as *;
+@use "sass:color";
 
 .productCard {
     @include flexbox($direction: column, $justify: space-between);
@@ -72,6 +73,6 @@
     transition: all .3s;
 
     &:hover {
-        background: darken($blue, 15%);
+        background: color.adjust($color: $blue, $lightness: -15%);
     }
 }
