@@ -9,7 +9,7 @@ import Market from '../assets/icons/Market.svg';
 import Race from '../assets/icons/Race.svg';
 import ShieldCheck from '../assets/icons/ShieldCheck.svg';
 import ShoppingCart from '../assets/icons/ShoppingCart.svg';
-import Tecnology from '../assets/icons/Tecnology.svg';
+import Tecnology from '../assets/icons/tecnology.svg';
 import Tools from '../assets/icons/Tools.svg';
 import Truck from '../assets/icons/Truck.svg';
 import UserCircle from '../assets/icons/UserCircle.svg';
