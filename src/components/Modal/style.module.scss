@@ -1,10 +1,12 @@
+@use "/src/styles/variables" as *;
+@use "/src/styles/mixins" as *;
+@use "sass:color";
+
 .overlay {
+    @include flexbox($justify: center, $align: center);
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1000;
 }
 
@@ -12,7 +14,7 @@
     background: white;
     border-radius: 8px;
     padding: 20px;
-    max-width: 500px;
+    max-width: 770px;
     width: 90%;
     position: relative;
     animation: slideIn 0.3s ease forwards;
@@ -20,12 +22,122 @@
 
 .closeBtn {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 16px;
+    right: 30px;
     border: none;
     background: transparent;
     font-size: 24px;
     cursor: pointer;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 26px;
+    padding: 36px 54px;
+}
+
+.image {
+    @include flexbox($align: center);
+    width: 250px;
+    height: 195px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.details {
+    @include flexbox($direction: column, $justify: space-between);
+    height: 100%;
+
+    h3 {
+        color: $black;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 1px;
+    }
+
+    strong {
+        color: $black;
+        font-family: Poppins;
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: 1px;
+        margin-top: 18px;
+        margin-bottom: 32px;
+    }
+
+    p {
+        color: $text-gray;
+        font-family: "Work Sans";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150.5%;
+        letter-spacing: 0.5px;
+    }
+}
+
+.moreDetails {
+    color: $blue;
+    font-family: "Work Sans";
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.55px;
+    padding: 8px 0px;
+    cursor: pointer;
+}
+
+.actions {
+    @include flexbox($align: center, $gap: 12px);
+    height: 36px;
+    margin-top: 32px;
+
+    button {
+        @include flexbox($align: center, $justify: center);
+        height: 100%;
+        width: 188px;
+        border: none;
+        border-radius: 6px;
+        background: $yellow;
+        color: $violet;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        transition: all 0.4s;
+        cursor: pointer;
+
+        &:hover {
+            background: color.adjust($color: $yellow, $lightness: -10%);
+            color: color.adjust($color: $blue, $lightness: -5%);
+        }
+    }
+}
+
+.quantity {
+    @include flexbox($align: center, $gap: 20px);
+    border-radius: 4px;
+    height: 100%;
+    padding: 0px 10px;
+    border: 1px solid #d9d9d9;
+    background: $white;
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
 }
 
 @keyframes slideIn {
@@ -36,5 +148,35 @@
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@include responsive($custom: 800px) {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 36px 20px;
+        width: 100%;
+    }
+
+    .modal {
+        width: auto;
+    }
+
+    .image {
+        @include flexbox($align: center);
+        width: 100%;
+        height: auto;
+    }
+}
+
+@include responsive($custom: 450px) {
+    .actions {
+        @include flexbox($direction: column, $gap: 12px);
+        height: max-content;
+        
+        .quantity, button{
+            height: 36px;
+        }
     }
 }

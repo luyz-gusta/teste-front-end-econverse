@@ -12,7 +12,6 @@
     background: $white;
     box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.22);
     padding: 20px 14px 16px 14px;
-    cursor: pointer;
     transition: all 0.3s;
 
     img {
@@ -55,6 +54,7 @@
     color: $blue;
     font-size: 12px;
     font-weight: 400;
+    font-family: Poppins;
 }
 
 .buyButton {
